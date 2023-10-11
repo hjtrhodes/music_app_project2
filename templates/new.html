@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Album Form</title>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Add new album</h1>
+
+        <form action="/albums" method="POST">
+            {% if error %}
+                <div class="t-error">
+                    Your form contained errors: {{error}}
+                </div>
+            {% endif %}
+
+            <p>
+                <label for="title"><strong>Enter Album Name:</strong></label><br>
+                <input type ="text" name="title" id="title">
+            </p>
+            <p>
+                <label for="release_year"><strong>Enter Album Release Year:</strong></label><br>
+                <input type ="text" name="release_year" id="release_year">
+            </p>
+            <p>
+                <label for="artist_id"><strong>Enter Artist ID:</strong></label><br>
+                <input type ="text" name="artist_id" id="artist_id">
+            </p>
+
+
+            <input type="submit" value="Add Album">
+        </form>
+    </body>
+</html>
